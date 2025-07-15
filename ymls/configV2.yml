@@ -1,4 +1,4 @@
-base_model: Qwen/Qwen3-1.7B
+base_model: /home/nearo/.cache/huggingface/hub/models--Qwen--Qwen3-1.7B/snapshots/0060bc56d46589041c1048efd1a397421b1142b5
 model_type: AutoModelForCausalLM
 tokenizer_type: AutoTokenizer
 trust_remote_code: true
@@ -7,14 +7,12 @@ datasets:
   - path: "./Training Data/infCafe_TrainData_v1.jsonl"
     type: chat_template
     field: conversation
-    prompt_style: chat
-    conversation: conversation
 
 load_in_8bit: false
 load_in_4bit: true
 adapter: qlora
 lora_r: 64
-lora_alpha: 16
+lora_alpha: 128
 lora_dropout: 0.05
 lora_target_modules:
   - q_proj
@@ -24,24 +22,30 @@ lora_target_modules:
   - gate_proj
   - up_proj
   - down_proj
+lora_modules_to_save: 
+  - embed_tokens# Include if you're adding/resizing tokens
+  - lm_head   
+lora_fan_in_fan_out: false
 
 sequence_len: 2048
 sample_packing: false
-pad_to_sequence_len: false
+pad_to_sequence_len: true
 
-val_set_size: 0.1
+val_set_size: 0.05
 output_dir: ./qlora-out
 
 num_epochs: 3
-micro_batch_size: 2
-gradient_accumulation_steps: 4
-optimizer: paged_adamw_32bit
+micro_batch_size: 1
+gradient_accumulation_steps: 16
+optimizer: paged_adamw_8bit
+
 lr_scheduler: cosine
 learning_rate: 0.0002
 
 train_on_inputs: false
-group_by_length: false
-bf16: true
+group_by_length: true
+
+bf16: auto
 fp16: false
 
 wandb_project: cafe-assistant
@@ -53,17 +57,13 @@ save_total_limit: 3
 logging_steps: 10
 eval_steps: 200
 
-special_tokens:
-  pad_token: "<|endoftext|>"
-  eos_token: "<|im_end|>"
-  bos_token: "<|im_start|>"
 
-templates:
-  - name: aira_chat
-    system_format: "<|im_start|>system\n{system}<|im_end|>\n"
-    user_format: "<|im_start|>user\n{input}<|im_end|>\n"
-    assistant_format: "<|im_start|>assistant\n{output}<|im_end|>\n"
-    system: |
+dataset_prepared_path: cafe_prepared
+
+chat_template: qwen3
+
+
+system_prompt: |
       \Kamu adalah AIRA. Tugasmu adalah mengubah permintaan user menjadi respons JSON yang bisa dipahami sistem backend. Jika ada yang bertanya Siapa Kamu, Kamu jawab Saya AIRA.
       /nothink dan semua currency dalam mata uang RUPIAH rp
 
@@ -282,7 +282,3 @@ templates:
       == ACTIONS ==
       (get_menu, get_popular_menus, create_orders, get_order_status, update_order, cancel_order,
       update_kitchen_status, get_order_duration, submit_menu_suggestion, add_menu)
-
-dataset_prepared_path: cafe_prepared
-
-chat_template: qwen3
