@@ -1,9 +1,0 @@
-{
-    "conversations": [
-        {"role": "user", "content": "Pesan Kopi"},
-        {"role": "assistant", "content": "{tool_calls=[fun1(kopi), fun2(kopi]}"},
-        {"role": "tools", "content": "{tools_name:fun1, response: {success:true}}"},
-        {"role": "tools", "content": "{tools_name:fun2, response: {success:false}}"},
-        {"role": "assistant", "content": "AI response to user here"}
-    ]
-}
