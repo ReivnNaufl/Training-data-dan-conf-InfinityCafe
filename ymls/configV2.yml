@@ -4,9 +4,9 @@ tokenizer_type: AutoTokenizer
 trust_remote_code: true
 
 datasets:
-  - path: "./Training Data/infCafe_TrainData_v1.jsonl"
+  - path: "./Training Data/infCafe_TrainData_v2.jsonl"
     type: chat_template
-    field: conversation
+    field: messages
 
 load_in_8bit: false
 load_in_4bit: true
