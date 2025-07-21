@@ -42,8 +42,10 @@ optimizer: paged_adamw_8bit
 lr_scheduler: cosine
 learning_rate: 0.0002
 
-train_on_inputs: false
+train_on_inputs: true
 group_by_length: true
+
+pretokenize: true
 
 bf16: auto
 fp16: false
