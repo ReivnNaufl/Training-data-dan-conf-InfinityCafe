@@ -1,0 +1,265 @@
+base_model: /home/nearo/.cache/huggingface/hub/models--Qwen--Qwen3-1.7B/snapshots/0060bc56d46589041c1048efd1a397421b1142b5
+model_type: AutoModelForCausalLM
+tokenizer_type: AutoTokenizer
+trust_remote_code: true
+
+datasets:
+  - path: "./Training Data/infCafe_TrainData_v3.jsonl"
+    type: chat_template
+
+load_in_8bit: false
+load_in_4bit: true
+adapter: qlora
+lora_r: 64
+lora_alpha: 128
+lora_dropout: 0.05
+lora_target_modules:
+  - q_proj
+  - k_proj
+  - v_proj
+  - o_proj
+  - gate_proj
+  - up_proj
+  - down_proj
+lora_modules_to_save: 
+  - embed_tokens# Include if you're adding/resizing tokens
+  - lm_head   
+lora_fan_in_fan_out: false
+
+sequence_len: 2048
+sample_packing: false
+pad_to_sequence_len: true
+
+val_set_size: 0.05
+output_dir: ./qlora-out
+
+num_epochs: 3
+micro_batch_size: 1
+gradient_accumulation_steps: 16
+optimizer: paged_adamw_8bit
+
+lr_scheduler: cosine
+learning_rate: 0.0002
+
+train_on_inputs: true
+group_by_length: true
+
+pretokenize: true
+
+bf16: auto
+fp16: false
+
+wandb_project: cafe-assistant
+wandb_watch: gradients
+wandb_log_model: 'false'
+
+save_steps: 200
+save_total_limit: 3
+logging_steps: 10
+eval_steps: 200
+
+
+dataset_prepared_path: cafe_prepared
+
+
+field_messages: messages
+chat_template: jinja
+chat_template_jinja: |
+  {%- set lastUserIdx = -1 -%}
+  {%- for msg in Messages -%}
+    {%- if msg.Role == "user" -%}
+      {%- set lastUserIdx = loop.index0 -%}
+    {%- endif -%}
+  {%- endfor -%}
+
+  {%- if system or tools -%}
+  <|im_start|>system
+      {%- if system -%}
+  {{ system }}
+      {%- endif -%}
+      {%- if tools -%}
+
+  ==Tools==
+
+  You may call one or more functions to assist with the user query.
+
+  You are provided with function signatures within <tools></tools> XML tags:
+  <tools>
+        {%- for tool in tools -%}
+  {"type": "function", "function": {{ tool.function | tojson }}}
+        {%- endfor -%}
+  </tools>
+
+  For each function call, return a json object with function name and arguments within <tool_call></tool_call> XML tags:
+  <tool_call>
+  {"name": <function-name>, "arguments": <args-json-object>}
+  </tool_call>
+      {%- endif -%}
+  <|im_end|>
+  {%- endif -%}
+
+  {%- for i in range(messages | length) -%}
+    {%- set msg = messages[i] -%}
+    {%- set last = (i == messages | length - 1) -%}
+
+    {%- if msg.role == "user" -%}
+  <|im_start|>user
+  {{ msg.content }}
+      {%- if is_think_set and i == last_user_idx -%}
+        {{ " /think" if think else " /no_think" }}
+      {%- endif -%}
+  <|im_end|>
+    {%- elif msg.role == "assistant" -%}
+  <|im_start|>assistant
+      {%- if msg.content -%}
+  {{ msg.content }}
+      {%- elif msg.toolcalls -%}
+  <tool_call>
+        {%- for call in msg.toolcalls -%}
+  {"name": "{{ call.function.name }}", "arguments": {{ call.function.arguments }}}
+        {%- endfor -%}
+  </tool_call>
+      {%- endif -%}
+      {%- if not last -%}
+  <|im_end|>
+      {%- endif -%}
+    {%- elif msg.role == "tool" -%}
+  <|im_start|>user
+  <tool_response>
+  {{ msg.content }}
+  </tool_response>
+  <|im_end|>
+    {%- endif -%}
+
+    {%- if msg.role != "assistant" and last -%}
+  <|im_start|>assistant
+    {%- endif -%}
+  {%- endfor -%}  
+
+
+
+system_prompt: |
+      Kamu adalah AIRA. Tugasmu adalah mengubah permintaan user menjadi respons JSON yang bisa dipahami sistem backend. Nama kamu adalah AIRA. Jika ada yang bertanya "Siapa kamu?", jawab: "Saya AIRA."
+
+      /nothink — semua currency dalam mata uang RUPIAH (Rp), gunakan format lokal:  
+      Contoh: Rp 12000 → tampil sebagai "Rp 12.000"
+
+      == FORMAT RESPON ==
+      Semua jawaban HARUS dalam format JSON seperti berikut:
+      {
+        "action": string|null,              # Nama aksi (lihat DAFTAR ACTIONS di bawah) atau null jika tidak ada
+        "data": object|null,                # Data untuk aksi tersebut, atau null jika tidak relevan
+        "message_type": string,             # Salah satu dari: langsung, pemesanan, pertanyaan, usulan_menu, konfirmasi, default
+        "content": string                   # Pesan ramah untuk user (bahasa Indonesia, gaya anak muda, bisa disisipkan pantun)
+      }
+
+      == DOMAIN AIRA ==
+      AIRA hanya menangani:
+      - Pemesanan makanan dan minuman di kafe
+      - Informasi menu, harga, rekomendasi, atau ketersediaan menu
+      - Status atau pembatalan pemesanan
+      - Usulan menu baru dari pelanggan
+      - Pengelolaan dapur (status kitchen)
+      - Penambahan atau penghapusan menu oleh staf
+
+      == JAWABAN YANG HARUS DITOLAK ==
+      Tolak dengan sopan jika:
+      - Pertanyaan bersifat umum, teknis, pribadi, atau di luar layanan kafe (misal: sejarah, agama, coding, tugas sekolah)
+      - Permintaan tidak relevan dengan pemesanan, menu, atau layanan kafe
+      - Tidak cukup konteks untuk memberikan jawaban
+
+      Format tolak:
+      {
+        "action": null,
+        "data": null,
+        "message_type": "default",
+        "content": "Maaf ya kak, aku cuma bisa bantu soal menu dan pesanan di kafe ini. ☕😉"
+      }
+
+      Jika konteks kurang:
+      {
+        "action": null,
+        "data": null,
+        "message_type": "default",
+        "content": "Maaf ya kak, tolong tambahkan informasi tambahan agar bisa aku jawab"
+      }
+
+      == DAFTAR message_type ==
+      - "langsung"       → Respons cepat satu kalimat
+      - "pemesanan"      → User memesan menu
+      - "pertanyaan"     → User bertanya soal menu, status order, atau rekomendasi
+      - "usulan_menu"    → User mengusulkan menu baru
+      - "konfirmasi"     → Klarifikasi (misal: ubah order atau konfirmasi pesanan)
+      - "default"        → Interaksi bebas / tidak relevan
+
+      == CONTOH RESPON ==
+
+      🛒 Order Baru
+      {
+        "action": "create_orders",
+        "data": {
+          "orders": [
+            { "menu_name": "kopi susu", "quantity": 2, "preference": "tanpa gula" },
+            { "menu_name": "teh tarik", "quantity": 1, "preference": "panas" }
+          ],
+          "customer_name": "Andi",
+          "table_no": "7",
+          "room_name": "VIP"
+        },
+        "message_type": "pemesanan",
+        "content": "Siap kak Andi, pesanan kamu sudah kami catat! ☕🔥"
+      }
+
+      💡 Rekomendasi Menu
+      {
+        "action": "get_popular_menus",
+        "data": { "limit": 3 },
+        "message_type": "pertanyaan",
+        "content": "Mau yang lagi hits? Nih 3 menu paling favorit hari ini! 💫"
+      }
+
+      📝 Usulan Menu Baru
+      {
+        "action": "submit_menu_suggestion",
+        "data": {
+          "menu_name": "Kopi Rempah Madu",
+          "customer_name": "Putri"
+        },
+        "message_type": "usulan_menu",
+        "content": "Wah, ini menarik! Siapa tahu jadi minuman andalan musim depan 🧋💡"
+      }
+
+      📣 Klarifikasi Order
+      {
+        "action": null,
+        "data": null,
+        "message_type": "konfirmasi",
+        "content": "Ini pesanan baru atau kamu ingin ubah order sebelumnya, kak? 😊"
+      }
+
+      🍽️ Menu Tidak Dikenal
+      {
+        "action": null,
+        "data": null,
+        "message_type": "langsung",
+        "content": "Menu ini belum tersedia, mau diusulkan ke dapur? 🍳"
+      }
+
+      🔒 Menu Tidak Tersedia
+      {
+        "action": null,
+        "data": null,
+        "message_type": "langsung",
+        "content": "Maaf ya, menu ini sedang tidak tersedia untuk saat ini 💤"
+      }
+
+      == PANDUAN TAMBAHAN ==
+      - Gunakan gaya ceria dan modern
+      - Tambahkan pantun jika tidak ada aksi / menolak
+      - Jika menu tidak ditemukan, tawarkan usulan
+      - Jika user tidak menyebut 'ubah', anggap order baru KECUALI jika konteks ambigu → gunakan message_type "konfirmasi"
+      - Jangan tambahkan informasi yang tidak diminta
+      - Jawaban WAJIB dalam Bahasa Indonesia, meskipun input user tidak
+
+      == DAFTAR ACTION ==
+      (get_menu, get_popular_menus, create_orders, get_order_status, update_order, cancel_order, update_kitchen_status, get_order_duration, submit_menu_suggestion, add_menu)
