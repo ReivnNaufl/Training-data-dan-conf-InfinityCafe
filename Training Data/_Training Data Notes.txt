@@ -1,4 +1,13 @@
 infCafe_TrainData_A1.jsonl:
 
-1-65 = Order Pesanan
-66-
+1 - 65 = Order Pesanan
+66 - 80 = out of context
+81 - 125 = accepted query
+126 - 175 = add usulan menu
+176 - 225 = cancel Order
+226 - 250 = list menu
+251 - 275 = lihat flavor
+276 - 300 = lihat usulan menu
+301 - 350 = order status
+351 - 400 = custom order
+401 - 430 = status kitchen

@@ -1,0 +1,33 @@
+{"messages":[{"role":"user","content":"Apakah dapur sedang buka sekarang?"},{"role":"assistant","content":"{\"action\":\"status_kitchen\",\"data\":{}}"}]}
+{"messages":[{"role":"user","content":"Kitchen lagi menerima pesanan?"},{"role":"assistant","content":"{\"action\":\"status_kitchen\",\"data\":{}}"}]}
+{"messages":[{"role":"user","content":"Saya mau tahu apakah dapur online?"},{"role":"assistant","content":"{\"action\":\"status_kitchen\",\"data\":{}}"}]}
+{"messages":[{"role":"user","content":"Status dapur, apakah masih buka?"},{"role":"assistant","content":"{\"action\":\"status_kitchen\",\"data\":{}}"}]}
+{"messages":[{"role":"user","content":"Cek apakah kitchen sedang open?"},{"role":"assistant","content":"{\"action\":\"status_kitchen\",\"data\":{}}"}]}
+{"messages":[{"role":"user","content":"Dapurnya aktif tidak?"},{"role":"assistant","content":"{\"action\":\"status_kitchen\",\"data\":{}}"}]}
+{"messages":[{"role":"user","content":"Bisa lihat apakah dapur terima orderan?"},{"role":"assistant","content":"{\"action\":\"status_kitchen\",\"data\":{}}"}]}
+{"messages":[{"role":"user","content":"Masih bisa pesan dari kitchen?"},{"role":"assistant","content":"{\"action\":\"status_kitchen\",\"data\":{}}"}]}
+{"messages":[{"role":"user","content":"Apakah kitchen buka untuk order?"},{"role":"assistant","content":"{\"action\":\"status_kitchen\",\"data\":{}}"}]}
+{"messages":[{"role":"user","content":"Kamu bisa cek dapur sekarang dibuka?"},{"role":"assistant","content":"{\"action\":\"status_kitchen\",\"data\":{}}"}]}
+{"messages":[{"role":"user","content":"Kalau saya pesan, dapur masih terima?"},{"role":"assistant","content":"{\"action\":\"status_kitchen\",\"data\":{}}"}]}
+{"messages":[{"role":"user","content":"Dapur lagi siap melayani pesan?"},{"role":"assistant","content":"{\"action\":\"status_kitchen\",\"data\":{}}"}]}
+{"messages":[{"role":"user","content":"Lihat status kitchen, apakah accept order?"},{"role":"assistant","content":"{\"action\":\"status_kitchen\",\"data\":{}}"}]}
+{"messages":[{"role":"user","content":"Kitchen sedang online?"},{"role":"assistant","content":"{\"action\":\"status_kitchen\",\"data\":{}}"}]}
+{"messages":[{"role":"user","content":"Tolong cek apakah dapur buka buat pesanan."},{"role":"assistant","content":"{\"action\":\"status_kitchen\",\"data\":{}}"}]}
+{"messages":[{"role":"user","content":"Apakah sekarang dapur masih nerima request?"},{"role":"assistant","content":"{\"action\":\"status_kitchen\",\"data\":{}}"}]}
+{"messages":[{"role":"user","content":"Kitchen available?"},{"role":"assistant","content":"{\"action\":\"status_kitchen\",\"data\":{}}"}]}
+{"messages":[{"role":"user","content":"Saya pengin tau dapur lagi kerja atau tidak."},{"role":"assistant","content":"{\"action\":\"status_kitchen\",\"data\":{}}"}]}
+{"messages":[{"role":"user","content":"Cek apakah kitchen sedang buka untuk orderan baru."},{"role":"assistant","content":"{\"action\":\"status_kitchen\",\"data\":{}}"}]}
+{"messages":[{"role":"user","content":"Apakah dapur masih menerima order sekarang?"},{"role":"assistant","content":"{\"action\":\"status_kitchen\",\"data\":{}}"}]}
+{"messages":[{"role":"user","content":"Kitchen lagi on?"},{"role":"assistant","content":"{\"action\":\"status_kitchen\",\"data\":{}}"}]}
+{"messages":[{"role":"user","content":"Tolong lihat status dapur, buka atau nggak?"},{"role":"assistant","content":"{\"action\":\"status_kitchen\",\"data\":{}}"}]}
+{"messages":[{"role":"user","content":"Saya mau tahu apakah kitchen lagi menerima orderan."},{"role":"assistant","content":"{\"action\":\"status_kitchen\",\"data\":{}}"}]}
+{"messages":[{"role":"user","content":"Dapur sekarang dalam keadaan buka?"},{"role":"assistant","content":"{\"action\":\"status_kitchen\",\"data\":{}}"}]}
+{"messages":[{"role":"user","content":"Dapur buka?"},{"role":"assistant","content":"{\"action\":\"status_kitchen\",\"data\":{}}"}]}
+{"messages":[{"role":"user","content":"Kitchen buka?"},{"role":"assistant","content":"{\"action\":\"status_kitchen\",\"data\":{}}"}]}
+{"messages":[{"role":"user","content":"Dapur masih buka?"},{"role":"assistant","content":"{\"action\":\"status_kitchen\",\"data\":{}}"}]}
+{"messages":[{"role":"user","content":"Kitchen ready?"},{"role":"assistant","content":"{\"action\":\"status_kitchen\",\"data\":{}}"}]}
+{"messages":[{"role":"user","content":"Dapur open?"},{"role":"assistant","content":"{\"action\":\"status_kitchen\",\"data\":{}}"}]}
+{"messages":[{"role":"user","content":"Status dapur gimana?"},{"role":"assistant","content":"{\"action\":\"status_kitchen\",\"data\":{}}"}]}
+{"messages":[{"role":"user","content":"Kitchen status?"},{"role":"assistant","content":"{\"action\":\"status_kitchen\",\"data\":{}}"}]}
+{"messages":[{"role":"user","content":"Dapur ready ga?"},{"role":"assistant","content":"{\"action\":\"status_kitchen\",\"data\":{}}"}]}
+{"messages":[{"role":"user","content":"Kitchen on ga?"},{"role":"assistant","content":"{\"action\":\"status_kitchen\",\"data\":{}}"}]}

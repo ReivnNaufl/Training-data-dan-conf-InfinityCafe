@@ -1,0 +1,25 @@
+{"messages": [{"role": "user", "content": "Usulan menu apa saja yang ada?"}, {"role": "assistant", "content": "{\"action\": \"list_usulan_menu\", \"data\": \"\"}"}]}
+{"messages": [{"role": "user", "content": "Bisa lihat daftar usulan menu dari pelanggan?"}, {"role": "assistant", "content": "{\"action\": \"list_usulan_menu\", \"data\": \"\"}"}]}
+{"messages": [{"role": "user", "content": "Menu apa saja yang diusulkan pelanggan?"}, {"role": "assistant", "content": "{\"action\": \"list_usulan_menu\", \"data\": \"\"}"}]}
+{"messages": [{"role": "user", "content": "Tolong tampilkan usulan menu dari customer"}, {"role": "assistant", "content": "{\"action\": \"list_usulan_menu\", \"data\": \"\"}"}]}
+{"messages": [{"role": "user", "content": "Ada usulan menu apa aja?"}, {"role": "assistant", "content": "{\"action\": \"list_usulan_menu\", \"data\": \"\"}"}]}
+{"messages": [{"role": "user", "content": "Bisa cek list usulan menu?"}, {"role": "assistant", "content": "{\"action\": \"list_usulan_menu\", \"data\": \"\"}"}]}
+{"messages": [{"role": "user", "content": "Mau liat daftar usulan menu dong"}, {"role": "assistant", "content": "{\"action\": \"list_usulan_menu\", \"data\": \"\"}"}]}
+{"messages": [{"role": "user", "content": "Sudah ada usulan menu apa saja?"}, {"role": "assistant", "content": "{\"action\": \"list_usulan_menu\", \"data\": \"\"}"}]}
+{"messages": [{"role": "user", "content": "Coba lihat usulan menu dari pengunjung"}, {"role": "assistant", "content": "{\"action\": \"list_usulan_menu\", \"data\": \"\"}"}]}
+{"messages": [{"role": "user", "content": "Menu apa saja yang pernah diusulkan?"}, {"role": "assistant", "content": "{\"action\": \"list_usulan_menu\", \"data\": \"\"}"}]}
+{"messages": [{"role": "user", "content": "Tolong tunjukkan list usulan menu"}, {"role": "assistant", "content": "{\"action\": \"list_usulan_menu\", \"data\": \"\"}"}]}
+{"messages": [{"role": "user", "content": "Bisa lihat daftar menu yang diusulkan?"}, {"role": "assistant", "content": "{\"action\": \"list_usulan_menu\", \"data\": \"\"}"}]}
+{"messages": [{"role": "user", "content": "Ada berapa usulan menu sekarang?"}, {"role": "assistant", "content": "{\"action\": \"list_usulan_menu\", \"data\": \"\"}"}]}
+{"messages": [{"role": "user", "content": "Tampilkan semua usulan menu"}, {"role": "assistant", "content": "{\"action\": \"list_usulan_menu\", \"data\": \"\"}"}]}
+{"messages": [{"role": "user", "content": "Mau tau usulan menu dari customer"}, {"role": "assistant", "content": "{\"action\": \"list_usulan_menu\", \"data\": \"\"}"}]}
+{"messages": [{"role": "user", "content": "Cek usulan menu dong"}, {"role": "assistant", "content": "{\"action\": \"list_usulan_menu\", \"data\": \"\"}"}]}
+{"messages": [{"role": "user", "content": "List semua usulan menu dari pelanggan"}, {"role": "assistant", "content": "{\"action\": \"list_usulan_menu\", \"data\": \"\"}"}]}
+{"messages": [{"role": "user", "content": "Apa saja usulan menu yang masuk?"}, {"role": "assistant", "content": "{\"action\": \"list_usulan_menu\", \"data\": \"\"}"}]}
+{"messages": [{"role": "user", "content": "Bisa lihat usulan menu sebelumnya?"}, {"role": "assistant", "content": "{\"action\": \"list_usulan_menu\", \"data\": \"\"}"}]}
+{"messages": [{"role": "user", "content": "Tunjukkan daftar usulan menu"}, {"role": "assistant", "content": "{\"action\": \"list_usulan_menu\", \"data\": \"\"}"}]}
+{"messages": [{"role": "user", "content": "Usulan menu dari customer apa aja?"}, {"role": "assistant", "content": "{\"action\": \"list_usulan_menu\", \"data\": \"\"}"}]}
+{"messages": [{"role": "user", "content": "Minta list usulan menu dong"}, {"role": "assistant", "content": "{\"action\": \"list_usulan_menu\", \"data\": \"\"}"}]}
+{"messages": [{"role": "user", "content": "Ada usulan menu baru apa aja?"}, {"role": "assistant", "content": "{\"action\": \"list_usulan_menu\", \"data\": \"\"}"}]}
+{"messages": [{"role": "user", "content": "Bisa cek usulan menu dari pengunjung?"}, {"role": "assistant", "content": "{\"action\": \"list_usulan_menu\", \"data\": \"\"}"}]}
+{"messages": [{"role": "user", "content": "Tolong lihatkan usulan menu yang ada"}, {"role": "assistant", "content": "{\"action\": \"list_usulan_menu\", \"data\": \"\"}"}]}

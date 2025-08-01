@@ -1,0 +1,26 @@
+{"messages": [{"role": "user", "content": "Tolong list menu yang ada"},{"role": "assistant","content": "{\"action\":\"list_menu\", \"data\":\"\"}"}]}
+{"messages": [{"role": "user", "content": "Tolong list menu yang ada"}, {"role": "assistant", "content": "{\"action\": \"list_menu\", \"data\": \"\"}"}]}
+{"messages": [{"role": "user", "content": "Bisa tunjukkan daftar menu?"}, {"role": "assistant", "content": "{\"action\": \"list_menu\", \"data\": \"\"}"}]}
+{"messages": [{"role": "user", "content": "Menu apa saja yang tersedia?"}, {"role": "assistant", "content": "{\"action\": \"list_menu\", \"data\": \"\"}"}]}
+{"messages": [{"role": "user", "content": "Mau liat menu dong"}, {"role": "assistant", "content": "{\"action\": \"list_menu\", \"data\": \"\"}"}]}
+{"messages": [{"role": "user", "content": "Ada menu apa aja ya?"}, {"role": "assistant", "content": "{\"action\": \"list_menu\", \"data\": \"\"}"}]}
+{"messages": [{"role": "user", "content": "Saya mau lihat menunya"}, {"role": "assistant", "content": "{\"action\": \"list_menu\", \"data\": \"\"}"}]}
+{"messages": [{"role": "user", "content": "Tampilkan daftar menu"}, {"role": "assistant", "content": "{\"action\": \"list_menu\", \"data\": \"\"}"}]}
+{"messages": [{"role": "user", "content": "Boleh liat menu?"}, {"role": "assistant", "content": "{\"action\": \"list_menu\", \"data\": \"\"}"}]}
+{"messages": [{"role": "user", "content": "Menu cafe apa aja?"}, {"role": "assistant", "content": "{\"action\": \"list_menu\", \"data\": \"\"}"}]}
+{"messages": [{"role": "user", "content": "Cek menu dong"}, {"role": "assistant", "content": "{\"action\": \"list_menu\", \"data\": \"\"}"}]}
+{"messages": [{"role": "user", "content": "Hari ini ada menu apa aja?"}, {"role": "assistant", "content": "{\"action\": \"list_menu\", \"data\": \"\"}"}]}
+{"messages": [{"role": "user", "content": "Bisa tunjukkan list menu?"}, {"role": "assistant", "content": "{\"action\": \"list_menu\", \"data\": \"\"}"}]}
+{"messages": [{"role": "user", "content": "Mau tau menu yang tersedia"}, {"role": "assistant", "content": "{\"action\": \"list_menu\", \"data\": \"\"}"}]}
+{"messages": [{"role": "user", "content": "Saya ingin lihat menunya"}, {"role": "assistant", "content": "{\"action\": \"list_menu\", \"data\": \"\"}"}]}
+{"messages": [{"role": "user", "content": "Bisa lihat daftar menu?"}, {"role": "assistant", "content": "{\"action\": \"list_menu\", \"data\": \"\"}"}]}
+{"messages": [{"role": "user", "content": "Tolong tunjukkan menu"}, {"role": "assistant", "content": "{\"action\": \"list_menu\", \"data\": \"\"}"}]}
+{"messages": [{"role": "user", "content": "Disini ada menu apa aja?"}, {"role": "assistant", "content": "{\"action\": \"list_menu\", \"data\": \"\"}"}]}
+{"messages": [{"role": "user", "content": "Minta daftar menunya dong"}, {"role": "assistant", "content": "{\"action\": \"list_menu\", \"data\": \"\"}"}]}
+{"messages": [{"role": "user", "content": "Boleh tau menu yang ada?"}, {"role": "assistant", "content": "{\"action\": \"list_menu\", \"data\": \"\"}"}]}
+{"messages": [{"role": "user", "content": "List semua menu"}, {"role": "assistant", "content": "{\"action\": \"list_menu\", \"data\": \"\"}"}]}
+{"messages": [{"role": "user", "content": "Kasih tau dong menunya apa aja"}, {"role": "assistant", "content": "{\"action\": \"list_menu\", \"data\": \"\"}"}]}
+{"messages": [{"role": "user", "content": "Menu disini apa aja ya?"}, {"role": "assistant", "content": "{\"action\": \"list_menu\", \"data\": \"\"}"}]}
+{"messages": [{"role": "user", "content": "Saya mau cek menu"}, {"role": "assistant", "content": "{\"action\": \"list_menu\", \"data\": \"\"}"}]}
+{"messages": [{"role": "user", "content": "Tolong tunjukkan daftar menu"}, {"role": "assistant", "content": "{\"action\": \"list_menu\", \"data\": \"\"}"}]}
+{"messages": [{"role": "user", "content": "Bisa lihat list menu?"}, {"role": "assistant", "content": "{\"action\": \"list_menu\", \"data\": \"\"}"}]}

@@ -1,0 +1,25 @@
+{"messages": [{"role": "user", "content": "Ada rasa apa aja untuk minumannya?"}, {"role": "assistant", "content": "{\"action\": \"list_flavors\", \"data\": \"\"}"}]}
+{"messages": [{"role": "user", "content": "Bisa tunjukkan varian rasa yang tersedia?"}, {"role": "assistant", "content": "{\"action\": \"list_flavors\", \"data\": \"\"}"}]}
+{"messages": [{"role": "user", "content": "Untuk kopi latte ada rasa apa aja?"}, {"role": "assistant", "content": "{\"action\": \"list_flavors\", \"data\": \"\"}"}]}
+{"messages": [{"role": "user", "content": "Milkshake nya ada rasa apa aja?"}, {"role": "assistant", "content": "{\"action\": \"list_flavors\", \"data\": \"\"}"}]}
+{"messages": [{"role": "user", "content": "Tolong list varian rasa yang ada"}, {"role": "assistant", "content": "{\"action\": \"list_flavors\", \"data\": \"\"}"}]}
+{"messages": [{"role": "user", "content": "Mau tau pilihan rasa yang tersedia"}, {"role": "assistant", "content": "{\"action\": \"list_flavors\", \"data\": \"\"}"}]}
+{"messages": [{"role": "user", "content": "Ada varian rasa apa aja untuk sirup?"}, {"role": "assistant", "content": "{\"action\": \"list_flavors\", \"data\": \"\"}"}]}
+{"messages": [{"role": "user", "content": "Bisa liat daftar rasa yang ada?"}, {"role": "assistant", "content": "{\"action\": \"list_flavors\", \"data\": \"\"}"}]}
+{"messages": [{"role": "user", "content": "Rasa apa aja yang tersedia?"}, {"role": "assistant", "content": "{\"action\": \"list_flavors\", \"data\": \"\"}"}]}
+{"messages": [{"role": "user", "content": "Minuman bisa pake rasa apa aja?"}, {"role": "assistant", "content": "{\"action\": \"list_flavors\", \"data\": \"\"}"}]}
+{"messages": [{"role": "user", "content": "Tunjukkan list rasa dong"}, {"role": "assistant", "content": "{\"action\": \"list_flavors\", \"data\": \"\"}"}]}
+{"messages": [{"role": "user", "content": "Varian rasa apa aja yang bisa dipilih?"}, {"role": "assistant", "content": "{\"action\": \"list_flavors\", \"data\": \"\"}"}]}
+{"messages": [{"role": "user", "content": "Ada berapa varian rasa?"}, {"role": "assistant", "content": "{\"action\": \"list_flavors\", \"data\": \"\"}"}]}
+{"messages": [{"role": "user", "content": "Bisa kasih tau rasa yang tersedia?"}, {"role": "assistant", "content": "{\"action\": \"list_flavors\", \"data\": \"\"}"}]}
+{"messages": [{"role": "user", "content": "List semua varian rasa"}, {"role": "assistant", "content": "{\"action\": \"list_flavors\", \"data\": \"\"}"}]}
+{"messages": [{"role": "user", "content": "Pilihan rasa apa aja yang ada?"}, {"role": "assistant", "content": "{\"action\": \"list_flavors\", \"data\": \"\"}"}]}
+{"messages": [{"role": "user", "content": "Untuk sirup ada rasa apa aja?"}, {"role": "assistant", "content": "{\"action\": \"list_flavors\", \"data\": \"\"}"}]}
+{"messages": [{"role": "user", "content": "Mau tau daftar rasa yang ada"}, {"role": "assistant", "content": "{\"action\": \"list_flavors\", \"data\": \"\"}"}]}
+{"messages": [{"role": "user", "content": "Bisa tambah rasa apa aja?"}, {"role": "assistant", "content": "{\"action\": \"list_flavors\", \"data\": \"\"}"}]}
+{"messages": [{"role": "user", "content": "Tolong tunjukkan varian rasa"}, {"role": "assistant", "content": "{\"action\": \"list_flavors\", \"data\": \"\"}"}]}
+{"messages": [{"role": "user", "content": "Ada opsi rasa apa aja?"}, {"role": "assistant", "content": "{\"action\": \"list_flavors\", \"data\": \"\"}"}]}
+{"messages": [{"role": "user", "content": "Rasa yang tersedia apa aja?"}, {"role": "assistant", "content": "{\"action\": \"list_flavors\", \"data\": \"\"}"}]}
+{"messages": [{"role": "user", "content": "Bisa liat list varian rasa?"}, {"role": "assistant", "content": "{\"action\": \"list_flavors\", \"data\": \"\"}"}]}
+{"messages": [{"role": "user", "content": "Tampilkan daftar rasa yang ada"}, {"role": "assistant", "content": "{\"action\": \"list_flavors\", \"data\": \"\"}"}]}
+{"messages": [{"role": "user", "content": "Mau tau pilihan rasa yang ada"}, {"role": "assistant", "content": "{\"action\": \"list_flavors\", \"data\": \"\"}"}]}
