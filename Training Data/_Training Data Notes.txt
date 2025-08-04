@@ -12,3 +12,7 @@ infCafe_TrainData_A1.jsonl:
 351 - 400 = custom order
 401 - 430 = status kitchen
 431 - 440 = add usulan menu negatif
+441 - 445 = add order no quantity
+446 - 455 = order status negatif
+456 - 475 = custom order negatif
+476 - 480 = cancel order negatif

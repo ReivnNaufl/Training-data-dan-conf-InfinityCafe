@@ -1,0 +1,15 @@
+{"messages":[{"role":"user","content":"Cancel order saya dong, salah pesan tadi."},{"role":"assistant","content":"{\"action\": \"cancel_order\", \"data\": {\"order_id\": null, \"reason\": \"Salah pesan\"}}"}]}
+{"messages":[{"role":"user","content":"Mau batalkan pesanan, tidak jadi ambil."},{"role":"assistant","content":"{\"action\": \"cancel_order\", \"data\": {\"order_id\": null, \"reason\": \"Tidak jadi ambil\"}}"}]}
+{"messages":[{"role":"user","content":"Tolong cancel order saya ya."},{"role":"assistant","content":"{\"action\": \"cancel_order\", \"data\": {\"order_id\": null, \"reason\": null}}"}]}
+{"messages":[{"role":"user","content":"Batalkan pesanan saya, keburu pulang."},{"role":"assistant","content":"{\"action\": \"cancel_order\", \"data\": {\"order_id\": null, \"reason\": \"Keburu pulang\"}}"}]}
+{"messages":[{"role":"user","content":"Mau cancel order nih, gak jadi."},{"role":"assistant","content":"{\"action\": \"cancel_order\", \"data\": {\"order_id\": null, \"reason\": \"Tidak jadi\"}}"}]}
+{"messages":[{"role":"user","content":"Cancel pesanan dong, salah input."},{"role":"assistant","content":"{\"action\": \"cancel_order\", \"data\": {\"order_id\": null, \"reason\": \"Salah input\"}}"}]}
+{"messages":[{"role":"user","content":"Tolong batalin order saya, berubah keputusan."},{"role":"assistant","content":"{\"action\": \"cancel_order\", \"data\": {\"order_id\": null, \"reason\": \"Berubah keputusan\"}}"}]}
+{"messages":[{"role":"user","content":"Mau batal pesan, teman saya juga batal."},{"role":"assistant","content":"{\"action\": \"cancel_order\", \"data\": {\"order_id\": null, \"reason\": \"Teman batal\"}}"}]}
+{"messages":[{"role":"user","content":"Cancel order, salah menu."},{"role":"assistant","content":"{\"action\": \"cancel_order\", \"data\": {\"order_id\": null, \"reason\": \"Salah menu\"}}"}]}
+{"messages":[{"role":"user","content":"Batalkan pesanan, lupa bawa dompet."},{"role":"assistant","content":"{\"action\": \"cancel_order\", \"data\": {\"order_id\": null, \"reason\": \"Lupa bawa dompet\"}}"}]}
+{"messages":[{"role":"user","content":"Tolong cancel, sudah telat."},{"role":"assistant","content":"{\"action\": \"cancel_order\", \"data\": {\"order_id\": null, \"reason\": \"Sudah telat\"}}"}]}
+{"messages":[{"role":"user","content":"Mau batalkan pesanan saya."},{"role":"assistant","content":"{\"action\": \"cancel_order\", \"data\": {\"order_id\": null, \"reason\": null}}"}]}
+{"messages":[{"role":"user","content":"Cancel order ya, ada urusan mendadak."},{"role":"assistant","content":"{\"action\": \"cancel_order\", \"data\": {\"order_id\": null, \"reason\": \"Ada urusan mendadak\"}}"}]}
+{"messages":[{"role":"user","content":"Batalkan pesanan, tidak sesuai ekspektasi."},{"role":"assistant","content":"{\"action\": \"cancel_order\", \"data\": {\"order_id\": null, \"reason\": \"Tidak sesuai ekspektasi\"}}"}]}
+{"messages":[{"role":"user","content":"Tolong cancel order, sudah makan di tempat lain."},{"role":"assistant","content":"{\"action\": \"cancel_order\", \"data\": {\"order_id\": null, \"reason\": \"Sudah makan di tempat lain\"}}"}]}
