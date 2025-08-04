@@ -105,14 +105,14 @@ system_prompt: |
       Deskripsi: Tambah pesanan baru ke sistem.
       Struktur object data:
       {
-        "customer_name": Nama dari user (required),
-        "room_name": Nama dari ruangan (required),
+        "customer_name": Nama dari user (required, String atau null),
+        "room_name": Nama dari ruangan (required, String atau null),
         "orders": [
           {
-            "menu_name": Nama makanan atau minuman (required),
-            "quantity": Jumlah pesanan (required),
-            "preference": Varian rasa dari minuman yang tersedia (optional),
-            "notes": Catatan untuk barista (optional)
+            "menu_name": Nama makanan atau minuman (required, String atau null),
+            "quantity": Jumlah pesanan (required, Integer atau null),
+            "preference": Varian rasa dari minuman yang tersedia (optional, String atau null),
+            "notes": Catatan untuk barista (optional, String atau null)
           }
         ]
       }
@@ -124,8 +124,8 @@ system_prompt: |
           {
             "menu_name": "Americano",
             "quantity": 1,
-            "preference": "",
-            "notes": ""
+            "preference": null,
+            "notes": null
           }
         ]
       }
@@ -139,7 +139,7 @@ system_prompt: |
       Deskripsi: Mengembalikkan status order pelanggan dengan order id. (METHOD GET)
       Struktur object data:
       {
-        "order_id": ID dari pesanan (required, String)
+        "order_id": ID dari pesanan (required, String atau null)
       }
       Contoh:
       {
@@ -150,8 +150,8 @@ system_prompt: |
       Deskripsi: Membatalkan pesanan pelanggan sesuai order id.
       Struktur object data:
       {
-        "order_id": ID dari pesanan (required, String),
-        "reason": alasan melakukan cancel (optional, String)
+        "order_id": ID dari pesanan (required, String atau null),
+        "reason": alasan melakukan cancel (optional, String atau null)
       }
       Contoh:
       {
@@ -163,14 +163,14 @@ system_prompt: |
       Deskripsi: Minuman tanpa flavour dapat dipesan dengan tambahan flavour.
       Struktur object data:
       {
-        "customer_name": Nama dari pelanggan (required, String),
-        "room_name": Nama dari ruangan (required, String),
+        "customer_name": Nama dari pelanggan (required, String atau null),
+        "room_name": Nama dari ruangan (required, String atau null),
         "orders": [
           {
-            "menu_name": Nama makanan atau minuman yang tidak memiliki flavour (required, String),
-            "quantity": Kuantitas atau jumlah dari makanan atau minuman (required, Integer),
-            "preference": Varian rasa dari minuman yang tersedia (optional, String),
-            "notes": Catatan untuk barista (optional, String)
+            "menu_name": Nama makanan atau minuman yang tidak memiliki flavour (required, String atau null),
+            "quantity": Kuantitas atau jumlah dari makanan atau minuman (required, Integer atau null),
+            "preference": Varian rasa dari minuman yang tersedia (optional, String atau null),
+            "notes": Catatan untuk barista (optional, String atau null)
           }
         ]
       }
@@ -183,7 +183,7 @@ system_prompt: |
             "menu_name": "Americano",
             "quantity": 1,
             "preference": "Macadamia Nut",
-            "notes": ""
+            "notes": null
           }
         ]
       }
@@ -197,8 +197,8 @@ system_prompt: |
       Deskripsi: Menambahkan usulan menu dari customer.
       Struktur object data:
       {
-        "menu_name": Usulan minuman yang diajukan pengusul (required, String),
-        "customer_name": Nama dari pengusul (required, String)
+        "menu_name": Usulan minuman yang diajukan pengusul (required, String atau null),
+        "customer_name": Nama dari pengusul (required, String atau null)
       }
       Contoh:
       {
