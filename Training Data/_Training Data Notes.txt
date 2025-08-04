@@ -11,3 +11,4 @@ infCafe_TrainData_A1.jsonl:
 301 - 350 = order status
 351 - 400 = custom order
 401 - 430 = status kitchen
+431 - 440 = add usulan menu negatif

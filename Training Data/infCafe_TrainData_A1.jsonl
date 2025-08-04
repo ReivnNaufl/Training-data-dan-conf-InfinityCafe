@@ -398,33 +398,43 @@
 {"messages": [{"role": "user", "content": "Dimas, regular room, custom Milk Tea satu, extra pearls ya kak."}, {"role": "assistant", "content": "{\"action\": \"custom_order\", \"data\": {\"customer_name\": \"Dimas\", \"room_name\": \"Regular\", \"orders\": [{\"menu_name\": \"Milk Tea\", \"quantity\": 1, \"preference\": \"\", \"notes\": \"Extra Pearls\"}]}}"}]}
 {"messages": [{"role": "user", "content": "Sinta, boleh custom dua Ice Tea sirup Caramel, kirim ke smoking area ya."}, {"role": "assistant", "content": "{\"action\": \"custom_order\", \"data\": {\"customer_name\": \"Sinta\", \"room_name\": \"Area Smoking\", \"orders\": [{\"menu_name\": \"Ice Tea\", \"quantity\": 2, \"preference\": \"Caramel\", \"notes\": \"\"}]}}"}]}
 {"messages": [{"role": "user", "content": "Fajar, VIP, custom tiga Mocha Frappe, sirup Vanilla dong, makasih."}, {"role": "assistant", "content": "{\"action\": \"custom_order\", \"data\": {\"customer_name\": \"Fajar\", \"room_name\": \"VIP\", \"orders\": [{\"menu_name\": \"Mocha Frappe\", \"quantity\": 3, \"preference\": \"Vanilla\", \"notes\": \"\"}]}}"}]}
-{"messages":[{"role":"user","content":"Apakah dapur sedang buka sekarang?"},{"role":"assistant","content":"{\"action\":\"status_kitchen\",\"data\":{}}"}]}
-{"messages":[{"role":"user","content":"Kitchen lagi menerima pesanan?"},{"role":"assistant","content":"{\"action\":\"status_kitchen\",\"data\":{}}"}]}
-{"messages":[{"role":"user","content":"Saya mau tahu apakah dapur online?"},{"role":"assistant","content":"{\"action\":\"status_kitchen\",\"data\":{}}"}]}
-{"messages":[{"role":"user","content":"Status dapur, apakah masih buka?"},{"role":"assistant","content":"{\"action\":\"status_kitchen\",\"data\":{}}"}]}
-{"messages":[{"role":"user","content":"Cek apakah kitchen sedang open?"},{"role":"assistant","content":"{\"action\":\"status_kitchen\",\"data\":{}}"}]}
-{"messages":[{"role":"user","content":"Dapurnya aktif tidak?"},{"role":"assistant","content":"{\"action\":\"status_kitchen\",\"data\":{}}"}]}
-{"messages":[{"role":"user","content":"Bisa lihat apakah dapur terima orderan?"},{"role":"assistant","content":"{\"action\":\"status_kitchen\",\"data\":{}}"}]}
-{"messages":[{"role":"user","content":"Masih bisa pesan dari kitchen?"},{"role":"assistant","content":"{\"action\":\"status_kitchen\",\"data\":{}}"}]}
-{"messages":[{"role":"user","content":"Apakah kitchen buka untuk order?"},{"role":"assistant","content":"{\"action\":\"status_kitchen\",\"data\":{}}"}]}
-{"messages":[{"role":"user","content":"Kamu bisa cek dapur sekarang dibuka?"},{"role":"assistant","content":"{\"action\":\"status_kitchen\",\"data\":{}}"}]}
-{"messages":[{"role":"user","content":"Kalau saya pesan, dapur masih terima?"},{"role":"assistant","content":"{\"action\":\"status_kitchen\",\"data\":{}}"}]}
-{"messages":[{"role":"user","content":"Dapur lagi siap melayani pesan?"},{"role":"assistant","content":"{\"action\":\"status_kitchen\",\"data\":{}}"}]}
-{"messages":[{"role":"user","content":"Lihat status kitchen, apakah accept order?"},{"role":"assistant","content":"{\"action\":\"status_kitchen\",\"data\":{}}"}]}
-{"messages":[{"role":"user","content":"Kitchen sedang online?"},{"role":"assistant","content":"{\"action\":\"status_kitchen\",\"data\":{}}"}]}
-{"messages":[{"role":"user","content":"Tolong cek apakah dapur buka buat pesanan."},{"role":"assistant","content":"{\"action\":\"status_kitchen\",\"data\":{}}"}]}
-{"messages":[{"role":"user","content":"Apakah sekarang dapur masih nerima request?"},{"role":"assistant","content":"{\"action\":\"status_kitchen\",\"data\":{}}"}]}
-{"messages":[{"role":"user","content":"Kitchen available?"},{"role":"assistant","content":"{\"action\":\"status_kitchen\",\"data\":{}}"}]}
-{"messages":[{"role":"user","content":"Saya pengin tau dapur lagi kerja atau tidak."},{"role":"assistant","content":"{\"action\":\"status_kitchen\",\"data\":{}}"}]}
-{"messages":[{"role":"user","content":"Cek apakah kitchen sedang buka untuk orderan baru."},{"role":"assistant","content":"{\"action\":\"status_kitchen\",\"data\":{}}"}]}
-{"messages":[{"role":"user","content":"Apakah dapur masih menerima order sekarang?"},{"role":"assistant","content":"{\"action\":\"status_kitchen\",\"data\":{}}"}]}
-{"messages":[{"role":"user","content":"Kitchen lagi on?"},{"role":"assistant","content":"{\"action\":\"status_kitchen\",\"data\":{}}"}]}
-{"messages":[{"role":"user","content":"Tolong lihat status dapur, buka atau nggak?"},{"role":"assistant","content":"{\"action\":\"status_kitchen\",\"data\":{}}"}]}
-{"messages":[{"role":"user","content":"Saya mau tahu apakah kitchen lagi menerima orderan."},{"role":"assistant","content":"{\"action\":\"status_kitchen\",\"data\":{}}"}]}
-{"messages":[{"role":"user","content":"Dapur sekarang dalam keadaan buka?"},{"role":"assistant","content":"{\"action\":\"status_kitchen\",\"data\":{}}"}]}
-{"messages":[{"role":"user","content":"Dapur buka?"},{"role":"assistant","content":"{\"action\":\"status_kitchen\",\"data\":{}}"}]}
-{"messages":[{"role":"user","content":"Kitchen buka?"},{"role":"assistant","content":"{\"action\":\"status_kitchen\",\"data\":{}}"}]}
-{"messages":[{"role":"user","content":"Dapur masih buka?"},{"role":"assistant","content":"{\"action\":\"status_kitchen\",\"data\":{}}"}]}
-{"messages":[{"role":"user","content":"Kitchen ready?"},{"role":"assistant","content":"{\"action\":\"status_kitchen\",\"data\":{}}"}]}
-{"messages":[{"role":"user","content":"Dapur open?"},{"role":"assistant","content":"{\"action\":\"status_kitchen\",\"data\":{}}"}]}
-{"messages":[{"role":"user","content":"Status dapur gimana?"},{"role":"assistant","content":"{\"action\":\"status_kitchen\",\"data\":{}}"}]}
+{"messages":[{"role":"user","content":"Apakah dapur sedang buka sekarang?"},{"role":"assistant","content":"{\"action\":\"status_kitchen\",\"data\":null}"}]}
+{"messages":[{"role":"user","content":"Kitchen lagi menerima pesanan?"},{"role":"assistant","content":"{\"action\":\"status_kitchen\",\"data\":null}"}]}
+{"messages":[{"role":"user","content":"Saya mau tahu apakah dapur online?"},{"role":"assistant","content":"{\"action\":\"status_kitchen\",\"data\":null}"}]}
+{"messages":[{"role":"user","content":"Status dapur, apakah masih buka?"},{"role":"assistant","content":"{\"action\":\"status_kitchen\",\"data\":null}"}]}
+{"messages":[{"role":"user","content":"Cek apakah kitchen sedang open?"},{"role":"assistant","content":"{\"action\":\"status_kitchen\",\"data\":null}"}]}
+{"messages":[{"role":"user","content":"Dapurnya aktif tidak?"},{"role":"assistant","content":"{\"action\":\"status_kitchen\",\"data\":null}"}]}
+{"messages":[{"role":"user","content":"Bisa lihat apakah dapur terima orderan?"},{"role":"assistant","content":"{\"action\":\"status_kitchen\",\"data\":null}"}]}
+{"messages":[{"role":"user","content":"Masih bisa pesan dari kitchen?"},{"role":"assistant","content":"{\"action\":\"status_kitchen\",\"data\":null}"}]}
+{"messages":[{"role":"user","content":"Apakah kitchen buka untuk order?"},{"role":"assistant","content":"{\"action\":\"status_kitchen\",\"data\":null}"}]}
+{"messages":[{"role":"user","content":"Kamu bisa cek dapur sekarang dibuka?"},{"role":"assistant","content":"{\"action\":\"status_kitchen\",\"data\":null}"}]}
+{"messages":[{"role":"user","content":"Kalau saya pesan, dapur masih terima?"},{"role":"assistant","content":"{\"action\":\"status_kitchen\",\"data\":null}"}]}
+{"messages":[{"role":"user","content":"Dapur lagi siap melayani pesan?"},{"role":"assistant","content":"{\"action\":\"status_kitchen\",\"data\":null}"}]}
+{"messages":[{"role":"user","content":"Lihat status kitchen, apakah accept order?"},{"role":"assistant","content":"{\"action\":\"status_kitchen\",\"data\":null}"}]}
+{"messages":[{"role":"user","content":"Kitchen sedang online?"},{"role":"assistant","content":"{\"action\":\"status_kitchen\",\"data\":null}"}]}
+{"messages":[{"role":"user","content":"Tolong cek apakah dapur buka buat pesanan."},{"role":"assistant","content":"{\"action\":\"status_kitchen\",\"data\":null}"}]}
+{"messages":[{"role":"user","content":"Apakah sekarang dapur masih nerima request?"},{"role":"assistant","content":"{\"action\":\"status_kitchen\",\"data\":null}"}]}
+{"messages":[{"role":"user","content":"Kitchen available?"},{"role":"assistant","content":"{\"action\":\"status_kitchen\",\"data\":null}"}]}
+{"messages":[{"role":"user","content":"Saya pengin tau dapur lagi kerja atau tidak."},{"role":"assistant","content":"{\"action\":\"status_kitchen\",\"data\":null}"}]}
+{"messages":[{"role":"user","content":"Cek apakah kitchen sedang buka untuk orderan baru."},{"role":"assistant","content":"{\"action\":\"status_kitchen\",\"data\":null}"}]}
+{"messages":[{"role":"user","content":"Apakah dapur masih menerima order sekarang?"},{"role":"assistant","content":"{\"action\":\"status_kitchen\",\"data\":null}"}]}
+{"messages":[{"role":"user","content":"Kitchen lagi on?"},{"role":"assistant","content":"{\"action\":\"status_kitchen\",\"data\":null}"}]}
+{"messages":[{"role":"user","content":"Tolong lihat status dapur, buka atau nggak?"},{"role":"assistant","content":"{\"action\":\"status_kitchen\",\"data\":null}"}]}
+{"messages":[{"role":"user","content":"Saya mau tahu apakah kitchen lagi menerima orderan."},{"role":"assistant","content":"{\"action\":\"status_kitchen\",\"data\":null}"}]}
+{"messages":[{"role":"user","content":"Dapur sekarang dalam keadaan buka?"},{"role":"assistant","content":"{\"action\":\"status_kitchen\",\"data\":null}"}]}
+{"messages":[{"role":"user","content":"Dapur buka?"},{"role":"assistant","content":"{\"action\":\"status_kitchen\",\"data\":null}"}]}
+{"messages":[{"role":"user","content":"Kitchen buka?"},{"role":"assistant","content":"{\"action\":\"status_kitchen\",\"data\":null}"}]}
+{"messages":[{"role":"user","content":"Dapur masih buka?"},{"role":"assistant","content":"{\"action\":\"status_kitchen\",\"data\":null}"}]}
+{"messages":[{"role":"user","content":"Kitchen ready?"},{"role":"assistant","content":"{\"action\":\"status_kitchen\",\"data\":null}"}]}
+{"messages":[{"role":"user","content":"Dapur open?"},{"role":"assistant","content":"{\"action\":\"status_kitchen\",\"data\":null}"}]}
+{"messages":[{"role":"user","content":"Status dapur gimana?"},{"role":"assistant","content":"{\"action\":\"status_kitchen\",\"data\":null}"}]}
+{"messages": [{"role": "user", "content": "Mau mengusulkan menu Avocado Espresso"}, {"role": "assistant", "content": "{\"action\": \"add_usulan_menu\", \"data\": {\"menu_name\": \"Avocado Espresso\", \"customer_name\": null}}"}]}
+{"messages": [{"role": "user", "content": "Ada usulan menu baru Chocolate Mint Float"}, {"role": "assistant", "content": "{\"action\": \"add_usulan_menu\", \"data\": {\"menu_name\": \"Chocolate Mint Float\", \"customer_name\": null}}"}]}
+{"messages": [{"role": "user", "content": "Ingin mengusulkan menu Coffee Jelly Milk Tea"}, {"role": "assistant", "content": "{\"action\": \"add_usulan_menu\", \"data\": {\"menu_name\": \"Coffee Jelly Milk Tea\", \"customer_name\": null}}"}]}
+{"messages": [{"role": "user", "content": "Saran menu baru Banana Milk Coffee"}, {"role": "assistant", "content": "{\"action\": \"add_usulan_menu\", \"data\": {\"menu_name\": \"Banana Milk Coffee\", \"customer_name\": null}}"}]}
+{"messages": [{"role": "user", "content": "Request menu baru Lychee Tea Float"}, {"role": "assistant", "content": "{\"action\": \"add_usulan_menu\", \"data\": {\"menu_name\": \"Lychee Tea Float\", \"customer_name\": null}}"}]}
+{"messages": [{"role": "user", "content": "Saya Randi ingin mengusulkan menu baru"}, {"role": "assistant", "content": "{\"action\": \"add_usulan_menu\", \"data\": {\"menu_name\": null, \"customer_name\": \"Randi\"}}"}]}
+{"messages": [{"role": "user", "content": "Halo, nama saya Dika. Mau kasih saran menu"}, {"role": "assistant", "content": "{\"action\": \"add_usulan_menu\", \"data\": {\"menu_name\": null, \"customer_name\": \"Dika\"}}"}]}
+{"messages": [{"role": "user", "content": "Perkenalkan, Siska disini. Ada usulan menu baru"}, {"role": "assistant", "content": "{\"action\": \"add_usulan_menu\", \"data\": {\"menu_name\": null, \"customer_name\": \"Siska\"}}"}]}
+{"messages": [{"role": "user", "content": "Nama saya Bambang, ingin mengusulkan menu"}, {"role": "assistant", "content": "{\"action\": \"add_usulan_menu\", \"data\": {\"menu_name\": null, \"customer_name\": \"Bambang\"}}"}]}
+{"messages": [{"role": "user", "content": "Saya Tika mau usul menu baru nih"}, {"role": "assistant", "content": "{\"action\": \"add_usulan_menu\", \"data\": {\"menu_name\": null, \"customer_name\": \"Tika\"}}"}]}
