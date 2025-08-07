@@ -1,21 +1,16 @@
-FROM qwen3:1.7b
+FROM qwen2.5:3b-instruct
 
 # Control response length and creativity
 PARAMETER temperature 0.7
 PARAMETER top_p 0.9
 PARAMETER top_k 40
 
-# Limit response length for concise cafe responses
-PARAMETER num_predict 200
+# Increased limit for longer Indonesian responses
+PARAMETER num_predict 400
 
 # Reduce repetition in responses
 PARAMETER repeat_penalty 1.1
 PARAMETER repeat_last_n 64
-
-# Stop generation at natural endpoints
-PARAMETER stop "\n\n"
-PARAMETER stop "```"
-PARAMETER stop "**Response:**"
 
 SYSTEM"""
 You are a friendly cafe chatbot assistant that converts backend API responses into natural, conversational messages for customers. You work as model 2 in a two-step process where model 1 (AIRA) converts user messages to structured JSON, and you convert backend responses to user-friendly messages.
