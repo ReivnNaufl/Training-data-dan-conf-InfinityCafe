@@ -4,7 +4,7 @@ tokenizer_type: AutoTokenizer
 trust_remote_code: true
 
 datasets:
-  - path: "./Training Data/infCafe_TrainData_A1.jsonl"
+  - path: "./Training Data/infCafe_TrainData_A2.jsonl"
     type: chat_template
     field: messages
 
@@ -32,7 +32,7 @@ sample_packing: false
 pad_to_sequence_len: true
 
 val_set_size: 0.05
-output_dir: ./qlora-out
+output_dir: ./model-a-qlora-out
 
 num_epochs: 3
 micro_batch_size: 2
