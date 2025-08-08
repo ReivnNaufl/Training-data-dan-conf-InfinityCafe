@@ -11,9 +11,9 @@ datasets:
 load_in_8bit: false
 load_in_4bit: true
 adapter: qlora
-lora_r: 64
-lora_alpha: 128
-lora_dropout: 0.05
+lora_r: 96
+lora_alpha: 192
+lora_dropout: 0.1
 lora_target_modules:
   - q_proj
   - k_proj
@@ -27,21 +27,21 @@ lora_modules_to_save:
   - lm_head   
 lora_fan_in_fan_out: false
 
-sequence_len: 2048
-sample_packing: false
-pad_to_sequence_len: true
+sequence_len: 1536
+sample_packing: true
+pad_to_sequence_len: false
 
 val_set_size: 0.05
 output_dir: ./model-a-qlora-out
 
 num_epochs: 3
 micro_batch_size: 2
-gradient_accumulation_steps: 16
-gradient_checkpointing: true  # Enable gradient checkpointing to save memory
+gradient_accumulation_steps: 12
+gradient_checkpointing: true  # Enable to save VRAM when multitasking
 optimizer: paged_adamw_8bit
 
 lr_scheduler: cosine
-learning_rate: 0.0002
+learning_rate: 0.0001
 
 train_on_inputs: true
 group_by_length: true
@@ -50,15 +50,16 @@ pretokenize: true
 
 bf16: true
 fp16: false
+tf32: true
 
 wandb_project: cafe-assistant
 wandb_watch: gradients
 wandb_log_model: 'false'
 
-save_steps: 200
-save_total_limit: 3
-logging_steps: 10
-eval_steps: 200
+save_steps: 100
+save_total_limit: 2
+logging_steps: 5
+eval_steps: 100
 
 
 dataset_prepared_path: cafe_prepared
