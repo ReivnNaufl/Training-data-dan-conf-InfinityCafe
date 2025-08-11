@@ -16,3 +16,22 @@ infCafe_TrainData_A1.jsonl:
 446 - 455 = order status negatif
 456 - 475 = custom order negatif
 476 - 480 = cancel order negatif
+
+infCafe_TrainData_A2.jsonl:
+
+1 - 114 = Order Pesanan
+115 - 129 = out of context
+130 - 174 = accepted query
+175 - 279 = add usulan menu
+280 - 378 = cancel Order
+379 - 429 = list menu
+430 - 484 = lihat flavor
+485 - 535 = lihat usulan menu
+536 - 610 = order status
+611 - 698 = custom order
+699 - 792 = status kitchen
+793 - 842 = add usulan menu negatif
+843 - 867 = add order no quantity
+868 - 920 = order status negatif
+921 - 1040 = custom order negatif
+1041 - 1089 = cancel order negatif

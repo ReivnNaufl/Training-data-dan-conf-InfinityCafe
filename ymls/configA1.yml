@@ -1,19 +1,19 @@
-base_model: /home/nearo/.cache/huggingface/hub/models--Qwen--Qwen3-1.7B/snapshots/0060bc56d46589041c1048efd1a397421b1142b5
+base_model: Qwen/Qwen2.5-3B-Instruct
 model_type: AutoModelForCausalLM
 tokenizer_type: AutoTokenizer
 trust_remote_code: true
 
 datasets:
-  - path: "./Training Data/infCafe_TrainData_A1.jsonl"
+  - path: "./Training Data/infCafe_TrainData_A2.jsonl"
     type: chat_template
     field: messages
 
 load_in_8bit: false
-load_in_4bit: false
+load_in_4bit: true
 adapter: qlora
-lora_r: 64
-lora_alpha: 128
-lora_dropout: 0.05
+lora_r: 96
+lora_alpha: 192
+lora_dropout: 0.1
 lora_target_modules:
   - q_proj
   - k_proj
@@ -31,22 +31,20 @@ sequence_len: 1536
 sample_packing: true
 pad_to_sequence_len: false
 
-val_set_size: 0.15
-output_dir: ./qlora-out
+val_set_size: 0.05
+output_dir: ./model-a-qlora-out
 
-num_epochs: 5
-micro_batch_size: 4
-gradient_accumulation_steps: 8
-gradient_checkpointing: false
-optimizer: adamw_bnb_8bit
-weight_decay: 0.01
+num_epochs: 3
+micro_batch_size: 2
+gradient_accumulation_steps: 12
+gradient_checkpointing: true  # Enable to save VRAM when multitasking
+optimizer: paged_adamw_8bit
 
 lr_scheduler: cosine
-learning_rate: 0.0002
-warmup_steps: 100
+learning_rate: 0.0001
 
-train_on_inputs: false
-group_by_length: false
+train_on_inputs: true
+group_by_length: true
 
 pretokenize: true
 
@@ -59,24 +57,14 @@ wandb_watch: gradients
 wandb_log_model: 'false'
 
 save_steps: 100
-save_total_limit: 5
+save_total_limit: 2
 logging_steps: 5
-eval_steps: 50
+eval_steps: 100
 
 
 dataset_prepared_path: cafe_prepared
 
-chat_template: qwen3
-
-early_stopping_patience: 3
-load_best_model_at_end: true
-metric_for_best_model: "eval_loss"
-greater_is_better: false
-
-torch_compile: true
-flash_attention: true
-deepspeed:
-ddp_timeout: 180000
+chat_template: qwen2.5
 
 
 system_prompt: |
@@ -86,7 +74,7 @@ system_prompt: |
       Semua jawaban HARUS dalam format JSON seperti berikut:
       {
         "action": string,              # Nama aksi user (lihat DAFTAR ACTIONS di bawah)
-        "data": object atau null,      # Data untuk aksi tersebut, atau null jika tidak relevan
+        "data": object atau null,                # Data untuk aksi tersebut, atau null jika tidak relevan
       }
 
       == DAFTAR ACTION ==
@@ -249,7 +237,7 @@ system_prompt: |
 
       == PANDUAN PEMROSESAN ==
       - Output HARUS dalam format JSON sesuai struktur yang ditentukan
+      - Field yang tidak disebutkan diisi null
       - Quantity default 1 jika tidak disebutkan
-      - Field yang tidak disebutkan HARUS diisi null, kecuali field quantity yang defaultnya 1
       - Hapus spasi berlebih dari semua string input
       - Selalu gunakan "" untuk string, bukan ''
