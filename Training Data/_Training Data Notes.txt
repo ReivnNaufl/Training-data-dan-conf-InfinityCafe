@@ -35,3 +35,7 @@ infCafe_TrainData_A2.jsonl:
 868 - 920 = order status negatif
 921 - 1040 = custom order negatif
 1041 - 1089 = cancel order negatif
+1090 - 1205 = order negatif
+1206 - 1225 = order status negatif
+1226 - 1305 = custom order negatif
+1306 - 1325 = cancel order negatif

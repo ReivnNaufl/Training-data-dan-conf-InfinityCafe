@@ -1,4 +1,4 @@
-base_model: Qwen/Qwen2.5-3B-Instruct
+base_model: Qwen/Qwen3-4B-Instruct
 model_type: AutoModelForCausalLM
 tokenizer_type: AutoTokenizer
 trust_remote_code: true
@@ -64,7 +64,7 @@ eval_steps: 100
 
 dataset_prepared_path: cafe_prepared
 
-chat_template: qwen2.5
+chat_template: qwen3
 
 
 system_prompt: |
@@ -237,7 +237,7 @@ system_prompt: |
 
       == PANDUAN PEMROSESAN ==
       - Output HARUS dalam format JSON sesuai struktur yang ditentukan
-      - Field yang tidak disebutkan diisi null
+      - Field dengan data yang tidak disebutkan HARUS diisi null terlepas jika field tersebut required atau tidak
       - Quantity default 1 jika tidak disebutkan
       - Hapus spasi berlebih dari semua string input
       - Selalu gunakan "" untuk string, bukan ''

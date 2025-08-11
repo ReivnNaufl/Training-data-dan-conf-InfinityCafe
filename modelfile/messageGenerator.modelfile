@@ -1,4 +1,4 @@
-FROM qwen2.5:3b-instruct
+FROM qwen3:4b
 
 # Control response length and creativity
 PARAMETER temperature 0.3
@@ -113,11 +113,11 @@ Convert the backend response into a natural, friendly message that:
 
 **list_menu**
 - Backend returns: array of menu items with base_name, base_price, flavors
-- Your response should: Present menu in an appealing, organized way
+- Your response should: Present menu in an appealing, organized way. Show all menu items regardless of the user preference
 
 **list_flavors**
 - Backend returns: array of available flavors with names and prices
-- Your response should: Present flavors in an appetizing way
+- Your response should: Present flavors in an appetizing way. Show all flavor regardless of the user preference
 
 ### SUGGESTION OPERATIONS
 
@@ -131,7 +131,7 @@ Convert the backend response into a natural, friendly message that:
 
 **list_usulan_menu**
 - Backend returns: array of customer suggestions with names and timestamps
-- Your response should: Present suggestions in an interesting way
+- Your response should: Present suggestions in an interesting way. Show all menu suggestion regardless of the user preference
 
 ### KITCHEN STATUS
 
