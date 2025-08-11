@@ -51,3 +51,25 @@
 {"messages": [{"role": "user", "content": "Status untuk pesanan ORD20250709151311234ABCD12"}, {"role": "assistant", "content": "{\"action\": \"order_status\", \"data\": {\"order_id\": \"ORD20250709151311234ABCD12\"}}"}]}
 {"messages": [{"role": "user", "content": "Cek order dengan ID ORD20250709151311234ABCD12"}, {"role": "assistant", "content": "{\"action\": \"order_status\", \"data\": {\"order_id\": \"ORD20250709151311234ABCD12\"}}"}]}
 {"messages": [{"role": "user", "content": "ORD20250709151311234ABCD12 sudah sampai mana prosesnya?"}, {"role": "assistant", "content": "{\"action\": \"order_status\", \"data\": {\"order_id\": \"ORD20250709151311234ABCD12\"}}"}]}
+
+//Order status tanpa parameter order_id
+{"messages": [{"role": "user", "content": "Pesanan saya sudah jadi belum?"}, {"role": "assistant", "content": "{\"action\": \"order_status\", \"data\": {\"order_id\": null}}"}]}
+{"messages": [{"role": "user", "content": "Bisa cek status pesanan saya?"}, {"role": "assistant", "content": "{\"action\": \"order_status\", \"data\": {\"order_id\": null}}"}]}
+{"messages": [{"role": "user", "content": "Gimana status pesanan saya?"}, {"role": "assistant", "content": "{\"action\": \"order_status\", \"data\": {\"order_id\": null}}"}]}
+{"messages": [{"role": "user", "content": "Tolong cek pesanan saya"}, {"role": "assistant", "content": "{\"action\": \"order_status\", \"data\": {\"order_id\": null}}"}]}
+{"messages": [{"role": "user", "content": "Mau tanya pesanan saya sudah siap belum?"}, {"role": "assistant", "content": "{\"action\": \"order_status\", \"data\": {\"order_id\": null}}"}]}
+{"messages": [{"role": "user", "content": "Status pesanan saya gimana ya?"}, {"role": "assistant", "content": "{\"action\": \"order_status\", \"data\": {\"order_id\": null}}"}]}
+{"messages": [{"role": "user", "content": "Bisa bantu cek order saya?"}, {"role": "assistant", "content": "{\"action\": \"order_status\", \"data\": {\"order_id\": null}}"}]}
+{"messages": [{"role": "user", "content": "Pesanan saya sudah bisa diambil belum?"}, {"role": "assistant", "content": "{\"action\": \"order_status\", \"data\": {\"order_id\": null}}"}]}
+{"messages": [{"role": "user", "content": "Mau lihat status order saya"}, {"role": "assistant", "content": "{\"action\": \"order_status\", \"data\": {\"order_id\": null}}"}]}
+{"messages": [{"role": "user", "content": "Bagaimana progress pesanan saya?"}, {"role": "assistant", "content": "{\"action\": \"order_status\", \"data\": {\"order_id\": null}}"}]}
+{"messages": [{"role": "user", "content": "Order saya sudah selesai belum?"}, {"role": "assistant", "content": "{\"action\": \"order_status\", \"data\": {\"order_id\": null}}"}]}
+{"messages": [{"role": "user", "content": "Tolong check status pesanan saya"}, {"role": "assistant", "content": "{\"action\": \"order_status\", \"data\": {\"order_id\": null}}"}]}
+{"messages": [{"role": "user", "content": "Bisa lihat pesanan saya?"}, {"role": "assistant", "content": "{\"action\": \"order_status\", \"data\": {\"order_id\": null}}"}]}
+{"messages": [{"role": "user", "content": "Cek order saya dong"}, {"role": "assistant", "content": "{\"action\": \"order_status\", \"data\": {\"order_id\": null}}"}]}
+{"messages": [{"role": "user", "content": "Status order saya apa ya?"}, {"role": "assistant", "content": "{\"action\": \"order_status\", \"data\": {\"order_id\": null}}"}]}
+{"messages": [{"role": "user", "content": "Pesanan saya sudah sampai mana?"}, {"role": "assistant", "content": "{\"action\": \"order_status\", \"data\": {\"order_id\": null}}"}]}
+{"messages": [{"role": "user", "content": "Mau cek pesanan saya"}, {"role": "assistant", "content": "{\"action\": \"order_status\", \"data\": {\"order_id\": null}}"}]}
+{"messages": [{"role": "user", "content": "Bisa tolong cek order saya?"}, {"role": "assistant", "content": "{\"action\": \"order_status\", \"data\": {\"order_id\": null}}"}]}
+{"messages": [{"role": "user", "content": "Pesanan saya sudah siap belum?"}, {"role": "assistant", "content": "{\"action\": \"order_status\", \"data\": {\"order_id\": null}}"}]}
+{"messages": [{"role": "user", "content": "Tolong lihat status pesanan saya"}, {"role": "assistant", "content": "{\"action\": \"order_status\", \"data\": {\"order_id\": null}}"}]}
