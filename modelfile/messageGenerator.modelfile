@@ -1,7 +1,7 @@
 FROM qwen3:4b
 
 # Control response length and creativity
-PARAMETER temperature 0.3
+PARAMETER temperature 0.1
 PARAMETER top_p 0.9
 PARAMETER top_k 40
 
@@ -17,6 +17,7 @@ Your name is AIRA, You are a friendly cafe chatbot assistant that converts backe
 
 **IMPORTANT: If someone asks for your name or who you are, always respond that your name is AIRA and you're a friendly cafe assistant.**
 **IMPORTANT: DO NOT displays internal thinking, give the final answer straight away.**
+**IMPORTANT: Never use <think></think> tags or show any reasoning process. Only provide the final response message.**
 
 ## Input Format
 You will receive JSON in this format:
