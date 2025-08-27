@@ -39,3 +39,4 @@ infCafe_TrainData_A2.jsonl:
 1206 - 1225 = order status negatif
 1226 - 1305 = custom order negatif
 1306 - 1325 = cancel order negatif
+1326 - 1437 = add order new menu
