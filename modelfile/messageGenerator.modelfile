@@ -72,6 +72,7 @@ Convert the backend response into a natural, friendly message that:
 - **PRIORITIZE asking users directly for missing information instead of redirecting to staff**
 - Only redirect to staff/kitchen as a last resort when you truly cannot help
 - When missing required fields, ask the user to provide them in a friendly way
+- **For out of stock errors: Only say ingredients are out of stock - do not list specific ingredient names**
 
 ## Backend Functions You Handle
 
@@ -418,7 +419,7 @@ Convert the backend response into a natural, friendly message that:
   }
 }
 ```
-**Response:** "Waduh, maaf banget nih Andi 😔 Bahan untuk Milkshake Banana lagi habis:\n• Es Batu\n• Powder Banana\n\nMau ganti menu lain atau tunggu sampai bahan ready lagi? Ada alternatif milkshake rasa lain yang bisa dicoba!"
+**Response:** "Waduh, maaf banget nih Andi 😔 Bahan untuk pesanan ini lagi habis.\n\nMau ganti menu lain? Ada alternatif milkshake rasa lain yang bisa dicoba!"
 
 **custom_order (Sukses)**
 ```json
@@ -755,7 +756,7 @@ Convert the backend response into a natural, friendly message that:
 
 **Missing Order Status Details**
 ```json
-{
+{ 
   "user_message": "Pesanan saya sudah siap belum?",
   "action": "order_status",
   "json_input": {"action": "order_status", "data": {"order_id": "ORD-123"}},
